@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SEO Meta Tags
+  ═══════════════════════════════════════════════════════════════ -->
+  <title>Naveen P | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Naveen P – Passionate Full Stack Developer & CS Graduate seeking opportunities to build impactful web applications. Skilled in React, Node.js, and modern web technologies." />
+  <meta name="keywords" content=" Full Stack Developer, Frontend Developer, React Developer, Node.js, JavaScript, Portfolio, Fresher, Software Engineer" />
+  <meta name="author" content="Naveen P" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Naveen P | Full Stack Developer" />
+  <meta property="og:description" content="Passionate Full Stack Developer building impactful web applications." />
+  <meta property="og:url" content="https://naveenp.dev" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Naveen P | Full Stack Developer" />
+  <meta name="twitter:description" content="Passionate Full Stack Developer building impactful web applications." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════════════════════════ -->
+  <div id="loading-screen" class="loading-screen" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-logo">&lt;NP /&gt;</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p class="loader-text">Initializing Portfolio…</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       STICKY NAVIGATION
+  ═══════════════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Home">&lt;NP /&gt;</a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home"       class="nav-link active">Home</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <!-- <li><a href="#experience" class="nav-link">Experience</a></li> -->
+        <li><a href="#education"  class="nav-link">Education</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <!-- Dark / Light Mode Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="home" class="hero" aria-label="Hero section">
+    <!-- Animated background particles -->
+    <div class="hero-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero-container">
+      <!-- Profile image -->
+      <div class="hero-image-wrap" data-aos="fade-right">
+        <div class="hero-avatar">
+          <!-- SVG avatar placeholder – replace src with your real photo -->
+          <img
+            src="Naveen.png"
+            alt="Naveen P – Full Stack Developer"
+            class="hero-photo"
+            loading="eager"
+          />
+          <div class="hero-avatar-ring" aria-hidden="true"></div>
+          <div class="hero-status-badge" aria-label="Available for hire">
+            <span class="status-dot"></span> Open to Work
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero text -->
+      <div class="hero-text" data-aos="fade-left">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Naveen <span class="accent">P</span></h1>
+        <div class="hero-title-wrap">
+          <span class="hero-static">I'm a</span>
+          <span class="hero-typewriter" id="typewriter" aria-live="polite"></span>
+          <span class="cursor" aria-hidden="true">|</span>
+        </div>
+        <p class="hero-bio">
+          A passionate Full Stack Developer and recent CS graduate who loves turning ideas
+          into elegant, performant web applications. I thrive at the intersection of clean
+          code and intuitive design.
+        </p>
+        <!-- CTA Buttons -->
+        <div class="hero-cta">
+          <a href="Naveen_P_Resume" download="Naveen_P_Resume" class="btn btn-primary" aria-label="Download resume PDF">
+            <i class="fas fa-download" aria-hidden="true"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline" aria-label="Navigate to contact section">
+            <i class="fas fa-envelope" aria-hidden="true"></i> Hire Me
+          </a>
+        </div>
+        <!-- Quick stats -->
+        <div class="hero-stats" aria-label="Quick statistics">
+          <div class="stat">
+            <span class="stat-num" data-target="3">0</span>+
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="1">0</span>+
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="1">0</span>+
+            <span class="stat-label">Internships</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+      <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+      <span>Scroll Down</span>
+    </a> -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="about" class="section about-section" aria-label="About me">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get to Know Me</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="section-subtitle">Driven by curiosity, shaped by code.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: summary card -->
+        <div class="about-card glass" data-aos="fade-right">
+          <div class="about-icon-row">
+            <span class="about-icon-box"><i class="fas fa-user-tie" aria-hidden="true"></i></span>
+            <h3>Professional Summary</h3>
+          </div>
+          <p>
+            I am a highly motivated Full Stack Developer with a strong foundation in modern web
+            technologies and a relentless drive for continuous learning. With hands-on experience
+            in building end-to-end web applications using <strong>React.js</strong>, <strong>Node.js</strong>,
+            and <strong>MySQL</strong>, I am equipped to contribute meaningfully from day one.
+          </p>
+          <p>
+            I take pride in writing clean, maintainable code and creating user experiences that
+            are both functional and visually compelling. Whether working solo or as part of an
+            agile team, I bring energy, attention to detail, and a solution-first mindset to
+            every challenge.
+          </p>
+        </div>
+
+        <!-- Right: objective + education snapshot -->
+        <div class="about-right" data-aos="fade-left">
+          <div class="about-card glass">
+            <div class="about-icon-row">
+              <span class="about-icon-box"><i class="fas fa-bullseye" aria-hidden="true"></i></span>
+              <h3>Career Objective</h3>
+            </div>
+            <p>
+              To secure a challenging software development role where I can apply my technical
+              skills, grow with a high-performing team, and contribute to products that positively
+              impact people's lives — while continuing to evolve as an engineer.
+            </p>
+          </div>
+
+          <div class="about-card glass about-edu-snap">
+            <div class="about-icon-row">
+              <span class="about-icon-box"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+              <h3>Education Snapshot</h3>
+            </div>
+            <ul class="edu-snap-list" role="list">
+              <li>
+                <strong>B.E. – Computer Science & Engineering</strong>
+                <span>Kongu Engineering College</span> Erode</span>
+                <span class="chip">2024 – 2026 · CGPA: 7.90 / 10</span>
+              </li>
+              <li>
+                <strong>Higher Secondary (Class XII)</strong>
+                <span>Bharani Park Matric Higher Secondary School</span>
+                <span class="chip">2024 · 74.6%</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills overview chips -->
+      <div class="about-chips" data-aos="fade-up">
+        <span class="chip skill-chip">React JS</span>
+        <span class="chip skill-chip">Node JS</span>
+        <span class="chip skill-chip">JavaScript</span>
+        <span class="chip skill-chip">MySQL</span>
+        <span class="chip skill-chip">HTML5 / CSS3</span>
+        <span class="chip skill-chip">Git &amp; GitHub</span>
+        <span class="chip skill-chip">REST APIs</span>
+        <span class="chip skill-chip">Responsive Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="skills" class="section skills-section" aria-label="Technical skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Work With</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        <p class="section-subtitle">Tools and technologies I use to bring ideas to life.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Skill Card: HTML5 -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="50">
+          <div class="skill-icon-wrap" style="--clr: #e34c26;">
+            <i class="fab fa-html5" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">HTML5</h4>
+          <p class="skill-desc">Semantic markup, accessibility, SEO-friendly structure.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 proficiency 90%">
+            <div class="skill-bar" data-width="90"></div>
+          </div>
+          <span class="skill-percent">90%</span>
+        </div>
+
+        <!-- Skill Card: CSS3 -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-icon-wrap" style="--clr: #264de4;">
+            <i class="fab fa-css3-alt" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">CSS3</h4>
+          <p class="skill-desc">Flexbox, Grid, animations, and modern UI effects.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 proficiency 85%">
+            <div class="skill-bar" data-width="85"></div>
+          </div>
+          <span class="skill-percent">85%</span>
+        </div>
+
+        <!-- Skill Card: JavaScript -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="150">
+          <div class="skill-icon-wrap" style="--clr: #f7df1e;">
+            <i class="fab fa-js-square" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">JavaScript</h4>
+          <p class="skill-desc">ES6+, async/await, DOM manipulation, APIs.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 82%">
+            <div class="skill-bar" data-width="82"></div>
+          </div>
+          <span class="skill-percent">82%</span>
+        </div>
+
+        <!-- Skill Card: React JS -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-icon-wrap" style="--clr: #61dafb;">
+            <i class="fab fa-react" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">React JS</h4>
+          <p class="skill-desc">Hooks, Context API, SPA development, component design.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="React JS proficiency 78%">
+            <div class="skill-bar" data-width="78"></div>
+          </div>
+          <span class="skill-percent">78%</span>
+        </div>
+
+        <!-- Skill Card: Node JS -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="250">
+          <div class="skill-icon-wrap" style="--clr: #3c873a;">
+            <i class="fab fa-node-js" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">Node JS</h4>
+          <p class="skill-desc">REST APIs, Express.js, middleware, server-side logic.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Node JS proficiency 72%">
+            <div class="skill-bar" data-width="72"></div>
+          </div>
+          <span class="skill-percent">72%</span>
+        </div>
+
+        <!-- Skill Card: Git & GitHub -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-icon-wrap" style="--clr: #f05032;">
+            <i class="fab fa-git-alt" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">Git &amp; GitHub</h4>
+          <p class="skill-desc">Version control, branching, pull requests, collaboration.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Git and GitHub proficiency 80%">
+            <div class="skill-bar" data-width="80"></div>
+          </div>
+          <span class="skill-percent">80%</span>
+        </div>
+
+        <!-- Skill Card: MySQL -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="350">
+          <div class="skill-icon-wrap" style="--clr: #00758f;">
+            <i class="fas fa-database" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">MySQL</h4>
+          <p class="skill-desc">Database design, queries, joins, normalization.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="MySQL proficiency 70%">
+            <div class="skill-bar" data-width="70"></div>
+          </div>
+          <span class="skill-percent">70%</span>
+        </div>
+
+        <!-- Skill Card: Responsive Web Design -->
+        <div class="skill-card glass" data-aos="fade-up" data-aos-delay="400">
+          <div class="skill-icon-wrap" style="--clr: #a855f7;">
+            <i class="fas fa-mobile-screen-button" aria-hidden="true"></i>
+          </div>
+          <h4 class="skill-name">Responsive Design</h4>
+          <p class="skill-desc">Mobile-first layouts, media queries, cross-device UX.</p>
+          <div class="skill-bar-wrap" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive design proficiency 88%">
+            <div class="skill-bar" data-width="88"></div>
+          </div>
+          <span class="skill-percent">88%</span>
+        </div>
+
+      </div><!-- /skills-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="projects" class="section projects-section" aria-label="Projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">A curated selection of my best work.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="project-filters" role="tablist" aria-label="Project category filter" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all"  role="tab" aria-selected="true">All</button>
+        <button class="filter-btn"        data-filter="web"  role="tab" aria-selected="false">Web Apps</button>
+        <button class="filter-btn"        data-filter="api"  role="tab" aria-selected="false">API / Backend</button>
+        <button class="filter-btn"        data-filter="ui"   role="tab" aria-selected="false">UI / Design</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card glass" data-category="web" data-aos="fade-up" data-aos-delay="50">
+          <div class="project-img-wrap">
+            <img
+              src="PROJECT1.png"
+              alt="ShopEase – E-Commerce Platform screenshot"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span class="project-overlay-text">View Project</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="chip">React JS</span>
+              <span class="chip">Node JS</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Express</span>
+            </div>
+            <h3 class="project-title">Smart Agro Connect – E-Commerce Platform</h3>
+            <p class="project-desc">
+             Smart Agro Connect is a decentralized/direct-to-consumer digital marketplace 
+             designed to bridge the gap between farmers and consumers. By eliminating unnecessary
+              intermediaries, the platform empowers farmers to earn fair prices for their
+               hard-earned produce while ensuring buyers receive fresh, high-quality farm products
+               at competitive market rates.
+            </p>
+            <div class="project-links">
+              <a href="https://farmersproject1.vercel.app/" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo for ShopEase">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+              </a>
+              <a href="https://github.com/naveenp6655/farmers_project" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for ShopEase">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+       <!-- Project 2 -- >
+        <article class="project-card glass" data-category="web" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <img
+              src="Naveen.jpg"
+              alt="TaskFlow – Project Management App screenshot"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span class="project-overlay-text">View Project</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="chip">React JS</span>
+              <span class="chip">Context API</span>
+              <span class="chip">CSS3</span>
+            </div>
+            <h3 class="project-title">TaskFlow – Project Management App</h3>
+            <p class="project-desc">
+              A Kanban-style task management web app with drag-and-drop boards, priority
+              labelling, deadline tracking, and local-storage persistence. Fully responsive
+              and optimised for touch devices.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo for TaskFlow">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+              </a>
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for TaskFlow">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card glass" data-category="api" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80"
+              alt="WeatherNow – Real-time Weather App screenshot"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span class="project-overlay-text">View Project</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="chip">JavaScript</span>
+              <span class="chip">OpenWeather API</span>
+              <span class="chip">HTML5</span>
+            </div>
+            <h3 class="project-title">WeatherNow – Real-time Weather App</h3>
+            <p class="project-desc">
+              A location-aware weather application that fetches live data from the OpenWeatherMap
+              API. Features a 5-day forecast, dynamic background themes based on conditions, and
+              geolocation support.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo for WeatherNow">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+              </a>
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for WeatherNow">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card glass" data-category="ui" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80"
+              alt="DevBlog – Minimalist Blogging Platform screenshot"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span class="project-overlay-text">View Project</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="chip">React JS</span>
+              <span class="chip">Node JS</span>
+              <span class="chip">MySQL</span>
+            </div>
+            <h3 class="project-title">DevBlog – Minimalist Blogging Platform</h3>
+            <p class="project-desc">
+              A clean, markdown-powered blogging platform with a rich text editor, category
+              filtering, comment system, and admin panel. Backend built with Express.js and
+              MySQL with JWT-based authentication.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo for DevBlog">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+              </a>
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for DevBlog">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card glass" data-category="api" data-aos="fade-up" data-aos-delay="250">
+          <div class="project-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80"
+              alt="QuizMaster – Online Quiz System screenshot"
+              class="project-img"
+              loading="lazy"
+            />
+            <div class="project-overlay" aria-hidden="true">
+              <span class="project-overlay-text">View Project</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="chip">JavaScript</span>
+              <span class="chip">Node JS</span>
+              <span class="chip">MySQL</span>
+            </div>
+            <h3 class="project-title">QuizMaster – Online Quiz System</h3>
+            <p class="project-desc">
+              A timed, multiple-choice quiz engine with category selection, score tracking,
+              leaderboard, and a question bank management system. Features anti-cheating tab
+              detection and score export to PDF.
+            </p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Live demo for QuizMaster">
+                <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+              </a>
+              <a href="#" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for QuizMaster">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════════════════════════════════ -->
+  
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       EDUCATION TIMELINE
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="education" class="section education-section" aria-label="Education timeline">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+        <p class="section-subtitle">The foundations that fuel my engineering passion.</p>
+      </div>
+
+      <div class="timeline" role="list">
+
+        <!-- Entry 1 -->
+        <div class="timeline-item" role="listitem" data-aos="fade-right">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass">
+            <span class="chip edu-year">2024 – 2026</span>
+            <h3 class="timeline-degree">B.E. – Computer Science &amp; Engineering</h3>
+            <p class="timeline-institution">
+              <i class="fas fa-university" aria-hidden="true"></i>
+              Kongu Engineering College, Erode, Tamil Nadu
+            </p>
+            <p class="timeline-cgpa">CGPA: <strong>7.90 / 10</strong></p>
+            <ul class="timeline-achievements" role="list">
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <div class="timeline-item" role="listitem" data-aos="fade-left">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass">
+            <span class="chip edu-year">2023 – 2024</span>
+            <h3 class="timeline-degree">Higher Secondary Certificate (Class XII)</h3>
+            <p class="timeline-institution">
+              <i class="fas fa-school" aria-hidden="true"></i>
+              Bharani Park Matric Higher Secondar School, Karur, Tamil Nadu
+            </p>
+            <p class="timeline-cgpa">Score: <strong>74.6%</strong></p>
+            <ul class="timeline-achievements" role="list">
+              <li><i class="fas fa-star" aria-hidden="true"></i> Stream: Computer Science with Mathematics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Entry 3 -->
+        <div class="timeline-item" role="listitem" data-aos="fade-right">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card glass">
+            <span class="chip edu-year">2022 – 2023</span>
+            <h3 class="timeline-degree">Secondary School Certificate (Class X)</h3>
+            <p class="timeline-institution">
+              <i class="fas fa-school" aria-hidden="true"></i>
+             Bharani Park Matric Higher Secondar School, Karur, Tamil Nadu
+            </p>
+            <p class="timeline-cgpa">Score: <strong>73.6%</strong></p>
+            <ul class="timeline-achievements" role="list">
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CONTACT SECTION  (EmailJS powered)
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section" aria-label="Contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-subtitle">Have an opportunity or just want to say hi? My inbox is always open.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-info-card glass">
+            <h3>Contact Information</h3>
+            <p>Fill out the form and I'll get back to you within 24 hours.</p>
+
+            <ul class="contact-list" role="list">
+              <li>
+                <span class="contact-icon-box"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:naveenp6655@gmail.com" class="contact-value">naveenp6655@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon-box"><i class="fas fa-phone" aria-hidden="true"></i></span>
+                <div>
+                  <span class="contact-label">Phone</span>
+                  <a href="tel:+919876543210" class="contact-value">+91 88387 24824</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon-box"><i class="fas fa-location-dot" aria-hidden="true"></i></span>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Erode, Tamil Nadu, India</span>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="social-row" aria-label="Social media links">
+              <a href="https://github.com/naveenp"    target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub profile">
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com/in/naveenp" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn profile">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="https://instagram.com/naveenp" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:naveenp6655@gmail.com" class="social-btn" aria-label="Send email">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp chat">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <!--
+            ┌────────────────────────────────────────────────────────┐
+            │  EMAILJS SETUP — replace these 3 values              │
+            │  1. YOUR_PUBLIC_KEY   → Account > API Keys           │
+            │  2. YOUR_SERVICE_ID   → Email Services tab           │
+            │  3. YOUR_TEMPLATE_ID  → Email Templates tab          │
+            │  See: https://www.emailjs.com/docs/                  │
+            └────────────────────────────────────────────────────────┘
+          -->
+          <form
+            id="contact-form"
+            class="glass"
+            novalidate
+            aria-label="Contact form"
+            data-emailjs-public-key="rc5Gzf4ME16IdA9nD"
+            data-emailjs-service-id="service_b26sm6p"
+            data-emailjs-template-id="template_1oyfyab"
+          >
+            <h3 class="form-title">Send a Message</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                    autocomplete="name"
+                    minlength="2"
+                    maxlength="80"
+                    aria-required="true"
+                    aria-describedby="name-error"
+                  />
+                </div>
+                <span class="field-error" id="name-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                    aria-describedby="email-error"
+                  />
+                </div>
+                <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrap">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+91 98765 43210"
+                    autocomplete="tel"
+                    pattern="[+0-9\s\-()]{7,20}"
+                    aria-describedby="phone-error"
+                  />
+                </div>
+                <span class="field-error" id="phone-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span class="required" aria-hidden="true">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-tag" aria-hidden="true"></i>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Job opportunity / Collaboration…"
+                    required
+                    maxlength="100"
+                    aria-required="true"
+                    aria-describedby="subject-error"
+                  />
+                </div>
+                <span class="field-error" id="subject-error" role="alert" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrap textarea-wrap">
+                <i class="fas fa-comment-dots" aria-hidden="true"></i>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me about the role, project, or anything you'd like to discuss…"
+                  required
+                  minlength="20"
+                  maxlength="2000"
+                  aria-required="true"
+                  aria-describedby="message-error"
+                ></textarea>
+              </div>
+              <span class="field-error" id="message-error" role="alert" aria-live="polite"></span>
+            </div>
+
+            <!-- Honeypot spam protection (hidden from real users) -->
+            <div class="hp-field" aria-hidden="true">
+              <input type="text" name="_honeypot" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              <span class="btn-text"><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message</span>
+              <span class="btn-loader" aria-hidden="true"><i class="fas fa-spinner fa-spin"></i> Sending…</span>
+            </button>
+
+            <!-- Form status messages -->
+            <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
+        </div>
+
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="nav-logo footer-logo">&lt;NP /&gt;</span>
+          <p>Crafting clean code &amp; elegant experiences, one commit at a time.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-social" aria-label="Footer social links">
+          <a href="https://github.com/naveenp6655"      target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/naveen-p-143657399/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/_nxveen._?igsh=MW9vMThoNWV2bnZxZQ=="   target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/918838724824"           target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Naveen P. Designed &amp; built with ❤️ in India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SCROLL-TO-TOP BUTTON
+  ═══════════════════════════════════════════════════════════════ -->
+  <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll back to top" title="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
